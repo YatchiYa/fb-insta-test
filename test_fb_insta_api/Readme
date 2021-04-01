@@ -1,0 +1,57 @@
+
+Questions Theoriques:
+
+**** D'apres ce que j'ai pu comprendre, les pipelines de données est une sorte de concepte qui fait réference 
+au differentes étapes de l'exploitation de la donnée depuis la collecte sur les differentes sources (tableau, streaming data (comme kafka)...), 
+l'organisation de ces données selon leur context et qualité, la transformation en effectuant les differentes verification..
+jusqu'au transfer au service dédié.
+
+donc si on a un flux de données récolté en temps réel, (que sa soit en relation avec un post, ou un commentaire ou une publication ou autre..)
+un algorithme de reseau de neuronne convulutifs sera appliqué à cette donnée là et pourra determiner si le text represente un Abus ou pas
+( bien evidement, deux type s'offre à nous, 
+une phase de training, test, qui sera appliqué à l'algorithme avec un dataset deja defini - mode suppérvisé -
+ou le mode non suppérvisé, et dans ce cas la, Il s'agit donc de découvrir les structures sous-jacentes à ces données non étiquetées)
+suite à cela, une decision sera prise afin de detecter si la donnée represente un Abus ou pas.
+
+sachant que LSTM est un reseau à memoire qui lui permet sauvegarder les informations d’une prédiction à l’autre, et lui seul 
+permet de classifier un text ou une image cependant il n'est pas vraiment optimisé, il ne pourra pas en extraire beaucoup d’informations
+contrairement aux filtres du CNN, d'un autre coté le CNN ne suffit pas non plus car il n'a accès au données qu'un instant t du traitement
+
+donc à mon avis, l'hybride CNN-LSTM sera plus adapté, par exemple : un court extrait d'un text est envoyé dans un LSTM
+qui va en extraire les idées principales (le text approprié). 
+Ensuite, ces informations sont envoyées dans un CNN à une seule dimension (donc qui est apte à travailler sur des séries temporelles) 
+qui prédira alors si le text represente un langage abusif ou pas.
+
+et aussi la tendance actuellement, c'est la reconnaissance du text offensif ou racite sur les images, le processus reste pareil à mon avis,
+qui consiste à detecter les zones sur l'image suceptible d'avoir du text, puis un reseau de neurones est utilisé
+pour reconnaître et retranscrire le mot dans cette région de l’image et le traiter.
+
+
+
+------------------------------------------------------------------------------------------------------
+
+- la base de données :
+    * local
+    * Serveur oû j'ai configuré une base de données (sur cloud amazon ) sur le site ATLAS mongoDB
+
+- Les contraintes rencontrées durant le test :
+    * les API instagram offrent un taux de requête possible trés limité (à defaut de payer pour upgrader le compte, ou créer plusieurs comptes)
+    * Les API facebook sont bloquées pour l'utilisation à usage personnel,
+        j'ai éssayé plusieurs fois avec les API ( sur facebook développeur )
+        cependant a chaque essaie j'ai des messages de confidentialité qui surgissent
+        et ne me permete pas récupérer les données sauf pour mon profile personnel.
+        
+        -> j'ai fais une demande d'autorisation sur la rubrique "Autorisations et fonctionnalités" 
+        cependant je n'ai toujours pas eu la confirmation..
+
+
+-------------------------------------------------------------------------------------------------------
+
+Je vous remercie pour l'experience/opportunité que vous m'avez offert durant ce test, j'ai appris beaucoup de nouvelles chose.
+et je vous assure de ma motivation pour apprendre avec vous et pouvoir m'investir à 100% dans mon travail.
+
+je reste à votre disposition pour toute information complementaires.
+au plaisir de pouvoir travailler avec vous.
+
+limite d'envoie : 1er avril à 10h34.
+heure d'envoie actuelle : 08:30
